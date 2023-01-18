@@ -1,0 +1,11 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://localhost:8080
+functions:
+  tester:
+    lang: runner-template-python3
+    handler: ./tester
+    image: kubiya/tester:latest
+    annotations:
+      topic: tester

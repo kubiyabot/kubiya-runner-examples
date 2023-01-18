@@ -1,0 +1,10 @@
+language: kubiya-runner
+fprocess: python index.py
+build_options:
+  - name: libpq
+    packages: 
+      - libpq-dev
+      - gcc
+      - python3-dev
+welcome_message: |
+  Welcome to Kubiya-Runner Python3 template.

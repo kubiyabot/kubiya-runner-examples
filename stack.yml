@@ -1,0 +1,11 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://localhost:8080
+functions:
+  queue-worker:
+    lang: golang-http
+    handler: ./queue-worker
+    image: kubiya/kubiya-faas-worker:latest 
+    secrets:
+      - nts-tkn
