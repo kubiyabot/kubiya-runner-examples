@@ -1,0 +1,12 @@
+version: 3
+type: conversation
+steps:
+  - id: response
+    type: action
+    action:
+      name: simple_action
+      store: sample-store
+      parameters: {}
+  - id: show_response
+    type: message
+    prompt: "${response}"
