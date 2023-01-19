@@ -5,7 +5,7 @@ steps:
     type: action
     action:
       name: simple_action
-      store: sample-store
+      store: tester
       parameters: {}
   - id: show_response
     type: message
