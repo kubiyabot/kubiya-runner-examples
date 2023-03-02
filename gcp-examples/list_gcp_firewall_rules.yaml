@@ -1,0 +1,18 @@
+author: "ram.matzkovsky@kubiya.ai"
+version: 3
+type: "conversation"
+name: "List GCP firewall rules"
+steps:
+  - type: "action"
+    id: "list_gcp_firewall_rules"
+    label: ""
+    action:
+      name: "list_firewall_rules"
+      store: "gcp"
+      runner: "ram-kubiya-demo"
+      parameters:
+        project_id: "test"
+  - type: "message"
+    id: "firewall_rulles"
+    label: ""
+    prompt: "\"${list_firewall_rules.output.result.results}"

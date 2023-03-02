@@ -1,0 +1,4 @@
+kubiya
+pydantic
+google-cloud-compute
+google-api-core
